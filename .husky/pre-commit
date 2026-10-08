@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+# Hook pre-commit du depot. Installe par `npm install` (scripts/install-hooks.mjs).
+# set -e : le premier check rouge bloque le commit.
+set -e
 
 npm run lint
 npm run typecheck
